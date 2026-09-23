@@ -1,0 +1,17 @@
+.cta {
+  position: relative;
+  padding-block: var(--space-9);
+  text-align: center;
+  overflow: clip;
+  border-top: 1px solid var(--line);
+}
+.cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(46rem 24rem at 50% 0%, rgba(185, 162, 79, 0.14), transparent 65%);
+  pointer-events: none;
+}
+.inner { position: relative; display: flex; flex-direction: column; align-items: center; gap: var(--space-5); }
+.kicker { font-family: var(--font-display); font-style: italic; color: var(--gold-bright); font-size: var(--text-md); }
+.title { font-size: var(--text-2xl); max-width: 40rem; }

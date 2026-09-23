@@ -1,0 +1,34 @@
+.about { background: var(--ink-2); }
+.grid {
+  display: grid;
+  gap: var(--space-7);
+  align-items: center;
+}
+.media {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+.media img { width: 100%; height: 100%; object-fit: cover; }
+.copy { display: flex; flex-direction: column; gap: var(--space-5); }
+.principles { display: flex; flex-direction: column; gap: var(--space-4); margin-top: var(--space-2); }
+.principle { display: flex; gap: var(--space-4); }
+.principleMark {
+  flex-shrink: 0;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  border: 1px solid var(--gold-dim);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-bright);
+}
+.principleTitle { font-family: var(--font-display); font-size: var(--text-md); margin-bottom: var(--space-1); }
+.principleText { color: var(--ink-text-dim); font-size: var(--text-sm); line-height: var(--leading-normal); }
+
+@media (min-width: 56rem) {
+  .grid { grid-template-columns: 0.85fr 1.15fr; gap: var(--space-9); }
+}

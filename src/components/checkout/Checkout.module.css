@@ -1,0 +1,65 @@
+.layout { display: grid; gap: var(--space-7); align-items: start; }
+.summaryCard {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  position: sticky;
+  top: calc(var(--header-h) + var(--space-4));
+}
+.summaryTitle { font-family: var(--font-display); font-size: var(--text-md); }
+.summaryRow { display: flex; justify-content: space-between; gap: var(--space-3); font-size: var(--text-sm); }
+.summaryLabel { color: var(--ink-text-dim); }
+.summaryDiscount { color: var(--success); }
+.summaryTotalRow { display: flex; justify-content: space-between; align-items: baseline; }
+.summaryTotal { font-family: var(--font-display); font-size: var(--text-lg); color: var(--gold-bright); }
+
+.form { display: flex; flex-direction: column; gap: var(--space-6); }
+.fieldset { border: 1px solid var(--line); border-radius: var(--radius-md); padding: var(--space-6); display: flex; flex-direction: column; gap: var(--space-4); }
+.fieldsetTitle { font-family: var(--font-display); font-size: var(--text-md); margin-bottom: var(--space-1); }
+.field { display: flex; flex-direction: column; gap: var(--space-2); }
+.label { font-size: var(--text-sm); font-weight: 600; }
+.input {
+  min-height: 3rem;
+  padding-inline: var(--space-4);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line-strong);
+  background: var(--ink-2);
+  color: var(--ink-text);
+}
+.input:focus-visible { border-color: var(--gold-bright); }
+.inputError { border-color: var(--danger); }
+.errorText { color: var(--danger); font-size: var(--text-xs); }
+.helperText { color: var(--ink-text-dim); font-size: var(--text-xs); }
+
+.paymentNote {
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+  font-size: var(--text-sm);
+  color: var(--ink-text-dim);
+  line-height: var(--leading-normal);
+}
+.paymentIcon { color: var(--gold-bright); flex-shrink: 0; margin-top: 0.1rem; }
+
+.banner {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  border: 1px solid var(--danger);
+  background: var(--danger-bg);
+  color: #ffd9c9;
+  border-radius: var(--radius-sm);
+  padding: var(--space-4);
+  font-size: var(--text-sm);
+}
+
+.submitRow { display: flex; flex-direction: column; gap: var(--space-3); }
+.secureNote { display: flex; align-items: center; gap: var(--space-2); font-size: var(--text-xs); color: var(--ink-text-dim); justify-content: center; }
+
+@media (min-width: 60rem) {
+  .layout { grid-template-columns: 22rem 1fr; }
+}

@@ -1,0 +1,94 @@
+/*
+  Sistema de tokens da Apex Barber.
+
+  Paleta extraída do material de marca real (logotipo e capas de atendimento
+  dos vídeos fornecidos): preto profundo de fundo, dourado envelhecido dos
+  bordados/brasão, branco-marfim das capas e paredes do salão. Não é a
+  paleta genérica "IA" (sem creme+terracota #D97757, sem verde-ácido sobre
+  preto) — vem de pixels reais da marca.
+
+  Tipografia: Bodoni Moda (serifada, alto contraste, remete a brasão/emblema
+  clássico — ecoa o próprio logotipo em serifa da Apex Barber) para títulos;
+  Hanken Grotesk (grotesca humanista, neutra e muito legível) para texto e
+  interface.
+*/
+
+:root {
+  color-scheme: dark;
+
+  /* ── Cor ────────────────────────────────────────────── */
+  --ink: #0b0b0c;
+  --ink-2: #141416;
+  --surface: #1a1a1d;
+  --surface-raised: #202023;
+  --paper: #f3efe6;
+  --paper-dim: #e8e2d4;
+
+  --gold: #b9a24f;
+  --gold-bright: #d8c479;
+  --gold-dim: #8a793a;
+
+  --ink-text: #efece4;
+  --ink-text-dim: #a8a49b;
+  --on-paper: #171613;
+  --on-paper-dim: #55503f;
+
+  --line: rgba(239, 236, 228, 0.14);
+  --line-strong: rgba(239, 236, 228, 0.26);
+  --line-on-paper: rgba(23, 22, 19, 0.14);
+
+  --danger: #d9603f;
+  --danger-bg: #2a1712;
+  --success: #7fae6b;
+
+  --focus-ring: #d8c479;
+
+  /* ── Tipografia ─────────────────────────────────────── */
+  --font-display: "Bodoni Moda Variable", "Bodoni Moda", Georgia, "Times New Roman", serif;
+  --font-body: "Hanken Grotesk Variable", "Hanken Grotesk", -apple-system, "Segoe UI", sans-serif;
+
+  --text-xs: 0.8125rem;
+  --text-sm: 0.9375rem;
+  --text-base: 1.0625rem;
+  --text-md: 1.25rem;
+  --text-lg: 1.625rem;
+  --text-xl: clamp(2rem, 1.5rem + 2.2vw, 3.25rem);
+  --text-2xl: clamp(2.75rem, 1.9rem + 3.8vw, 5.25rem);
+
+  --leading-tight: 1.08;
+  --leading-snug: 1.3;
+  --leading-normal: 1.55;
+  --leading-relaxed: 1.7;
+
+  /* ── Espaço ─────────────────────────────────────────── */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+  --space-9: 6.5rem;
+  --space-10: 9rem;
+
+  --content-max: 76rem;
+  --content-narrow: 42rem;
+  --radius-sm: 3px;
+  --radius-md: 6px;
+  --radius-pill: 999px;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 160ms;
+  --duration-base: 280ms;
+  --duration-slow: 520ms;
+
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.4), 0 12px 32px -12px rgba(0, 0, 0, 0.55);
+  --header-h: 4.5rem;
+}
+
+@media (min-width: 64rem) {
+  :root {
+    --header-h: 5.25rem;
+  }
+}

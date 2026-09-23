@@ -1,0 +1,107 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: var(--header-h);
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background-color var(--duration-base) var(--ease-out), border-color var(--duration-base) var(--ease-out), backdrop-filter var(--duration-base) var(--ease-out);
+}
+.header.scrolled {
+  background: rgba(11, 11, 12, 0.86);
+  backdrop-filter: blur(10px);
+  border-bottom-color: var(--line);
+}
+.bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-5);
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-shrink: 0;
+}
+.brandMark { height: 2.5rem; width: auto; }
+.brandName {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+.nav {
+  display: none;
+  align-items: center;
+  gap: var(--space-6);
+}
+.navLink {
+  font-size: var(--text-sm);
+  color: var(--ink-text-dim);
+  padding-block: var(--space-2);
+  border-bottom: 1px solid transparent;
+  transition: color var(--duration-fast) var(--ease-out), border-color var(--duration-fast) var(--ease-out);
+}
+.navLink:hover { color: var(--ink-text); border-color: var(--gold-dim); }
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+.ctaDesktop { display: none; }
+.menuBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: var(--radius-sm);
+  color: var(--ink-text);
+}
+.menuBtn:hover { color: var(--gold-bright); }
+
+@media (min-width: 64rem) {
+  .nav { display: flex; }
+  .ctaDesktop { display: inline-flex; }
+  .menuBtn { display: none; }
+}
+
+.panel {
+  position: fixed;
+  inset: 0;
+  z-index: 150;
+  background: var(--ink);
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-5);
+}
+.panelTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-h);
+}
+.panelNav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-5);
+}
+.panelLink {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--ink-text);
+}
+.panelLink:hover { color: var(--gold-bright); }
+.panelFooter {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--line);
+}
